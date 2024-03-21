@@ -14,3 +14,35 @@
     object-fit: cover;
     z-index: -1;
 }
+
+
+.glav_icran {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+section {
+    margin: 70px 0; /* Отступы между секциями */
+}
+
+.skills{
+margin: 100px 0;
+color : #fcccfa;
+
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.profile-photo {
+    width: 150px; /* Или другой размер по вашему желанию */
+    height: auto;
+    border-radius: 50%; /* Делает фотографию круглой */
+    margin-right: 20px;
+    float: left; /* Выравнивание фотографии слева от текста */
+}
