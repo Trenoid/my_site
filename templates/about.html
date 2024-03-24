@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/me.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/me.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontello.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
     <title>Talipov</title>
 </head>
 <body style="background-color: black;">
@@ -17,14 +20,14 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "background-color: rgb(0, 0, 0);" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="about.html"><img src = "../img/me.png"> </a>
+              <a class="navbar-brand" href="about.html"><img src = "../static/img/me.png" alt="Мой портрет"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"><img src="../img/menu.png" alt="Menu"></span>
+                <span class="navbar-toggler-icon"><img src="../static/img/menu.png" alt="Menu"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html"  style = "color : #42e4f6">Главная</a>
+                    <a class="nav-link active" aria-current="page" href="/"  style = "color : #42e4f6">Главная</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="blog.html" style = "color : #42e4f6">Блог</a>
@@ -61,7 +64,7 @@
       <div class="row">
         <div class="col-12">
           <section class="introduction text-center" style="color:  #42e4f6;">
-            <img src="../img/Bme.jpg" alt="Фото Ramis" class="profile-photo">
+            <img src="../static/img/Bme.jpg" alt="Фото Ramis" class="profile-photo">
             <h2>О себе</h2>
             <p>Привет! Меня зовут Рамис. Я начинающий Python разработчик, специализирующийся на backend разработке. Страстно увлечен изучением информационных технологий.</p>
         </section>
@@ -96,13 +99,13 @@
               <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
               </a>
-              <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+              <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Talipov</span>
             </div>
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
             </ul>
           </footer>
         </div>
@@ -118,5 +121,6 @@
 
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

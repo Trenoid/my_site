@@ -29,9 +29,9 @@ def blog():
 
 @app.route('/books.html')
 def books():
-    #books = get_all_books()
-    #print(f"Книг: {books}")
-    return (render_template('books.html'))
+    books = get_all_books()
+    print(f"Книг: {books}")
+    return (render_template('books.html',books=books))
 
 @app.route('/course.html')
 def course():
