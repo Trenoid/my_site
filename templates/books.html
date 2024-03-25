@@ -61,32 +61,36 @@
 
 
   <main>
-    <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for book in books%}
-             <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                  <div class="card-body">
-                    <p class="card-text">Книга</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Йоу</button>
-                      </div>
-                      <small class="text-body-secondary">8/10</small>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           {% endfor %}
-          
-    
-            
+
+
+    <div class="container">
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          {% for book in books%}
+          <div class="col">
+            <div class="card border-danger bg-dark h-100 " style="width: 18rem;">
+              <img src="../static/img/books_img/{{book[4]}}" width="300" height="300"  alt="gg" class="card-img-top">
+              <div class="card-body text-danger card text-bg-success bg-transparent">
+                <h5 class="card-title">{{book[1]}}</h5>
+                <p class="card-text">{{book[3]}}</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <em>Авторы</em>: {{book[2]}}</li>
+                <li class="list-group-item"><em>Категория</em>: {{book[6]}}</li>
+                <li class="list-group-item"><em>Оценка:</em> {{book[5]}}/10</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="btn btn-primary">Подробнее</a>
+              </div>
+            </div>
           </div>
+          {% endfor %}
+        
         </div>
       </div>
+      </div> 
+  
     
 
   </main>
