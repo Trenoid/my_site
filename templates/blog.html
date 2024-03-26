@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/me.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/me.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontello.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontello.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
     <title>Talipov</title>
 </head>
 <body style="background-color: black;">
@@ -17,14 +20,14 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src = "../img/me.png"> </a>
+              <a class="navbar-brand" href="about.html"><img src = "../static/img/me.png"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"> <img src="../img/menu.png" alt="Menu"></span>
+                <span class="navbar-toggler-icon"> <img src="../static/img/menu.png" alt="Menu"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html"  style = "color : #42e4f6">Главная</a>
+                    <a class="nav-link active" aria-current="page" href="/"  style = "color : #42e4f6">Главная</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="blog.html" style = "color : #42e4f6">Блог</a>
@@ -41,7 +44,7 @@
                     </a>
                     <ul class="dropdown-menu" style="background-color: black;">
                       <li><a class="dropdown-item" href="books.html" style = "color : #42e4f6">Книги</a></li>
-                      <li><a class="dropdown-item" href="lection.html" style = "color : #42e4f6">Лекции</a></li>
+                      <li><a class="dropdown-item" href="lection.html" style = "color : #42e4f6">Полезные ресурсы</a></li>
                       <li><a class="dropdown-item" href="course.html" style = "color : #42e4f6">Курсы</a></li>
                     </ul>
                   </li>
@@ -57,15 +60,8 @@
 
 
     <main>
-        <div class="video-container">
-          <video autoplay loop muted>
-              <source src="../img/background-video.mp4" type="video/mp4">
-          </video>
-
-
-          
-        </div>
-      </main>
+        
+    </main>
       
 
       <footer>
@@ -76,13 +72,13 @@
               <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                 <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
               </a>
-              <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Company, Inc</span>
+              <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 Talipov</span>
             </div>
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../img/me.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://vk.com/ididomoii"><img src="../static/img/icon-vk1.png" height="55"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://www.instagram.com/talipov_ramiss/"><img src="../static/img/icon-instagram.png" height="55"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://t.me/trenoid"><img src="../static/img/icon-telegram.png" height="55"></a></li>
             </ul>
           </footer>
         </div>
@@ -98,5 +94,6 @@
 
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

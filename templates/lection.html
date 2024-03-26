@@ -44,7 +44,7 @@
                     </a>
                     <ul class="dropdown-menu" style="background-color: black;">
                       <li><a class="dropdown-item" href="books.html" style = "color : #42e4f6">Книги</a></li>
-                      <li><a class="dropdown-item" href="lection.html" style = "color : #42e4f6">Лекции</a></li>
+                      <li><a class="dropdown-item" href="lection.html" style = "color : #42e4f6">Полезные ресурсы</a></li>
                       <li><a class="dropdown-item" href="course.html" style = "color : #42e4f6">Курсы</a></li>
                     </ul>
                   </li>
@@ -71,13 +71,14 @@
         <div class="card-body text-primary card text-bg-success bg-transparent">
           <h5 class="card-title text-danger ">{{resource[2]}}</h5>
           <p class="card-text">{{resource[4]}}</p>
-          <a href="{{resource[3]}}" class="btn btn-primary">Ссылка на ресурс</a>
+          <a href="{{resource[3]}}" target="_blank" class="btn btn-primary">Ссылка на ресурс</a>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
 </div> 
+<br>
 
   </main>
       
@@ -94,9 +95,9 @@
             </div>
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="#"><img src="../static/img/me.png"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://vk.com/ididomoii"><img src="../static/img/icon-vk1.png"  target="_blank" height="55"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://www.instagram.com/talipov_ramiss/"><img src="../static/img/icon-instagram.png" height="55"></a></li>
+              <li class="ms-3"><a class="text-body-secondary" target="_blank" href="https://t.me/trenoid"><img src="../static/img/icon-telegram.png" height="55"></a></li>
             </ul>
           </footer>
         </div>
