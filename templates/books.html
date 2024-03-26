@@ -12,15 +12,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
     <title>Talipov</title>
 </head>
-<body style="background-color: black;">
-
-
-
+<body style= "background-image: url('../static/img/fon_img/fon_img8.jpg');      
+background-position: center center;      
+background-repeat: no-repeat;      
+background-attachment: fixed;      
+background-size: cover;      
+background-color: #464646;">
     
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" style = "background-color: rgb(0, 0, 0);" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src = "../static/img/me.png"> </a>
+              <a class="navbar-brand" href="about.html"><img src = "../static/img/me.png"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"><img src="../static/img/menu.png" alt="Menu"></span>
               </button>
@@ -49,7 +51,7 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style = "color : #42e4f6">Связаться</a>
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#" style = "color : #42e4f6">Связаться</a>
                   </li>
                 </ul>
               </div>
@@ -91,9 +93,6 @@
               </ul>
               <div class="card-body">
                 <a href="#" target="_blank" class="btn btn-primary">Ссылка на книгу</a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-book-content="{{book[7]}}">
-                  О книге
-                </button>
               </div>
             </div>
           </div>
@@ -108,6 +107,10 @@
 
 
 
+
+
+
+
   <!-- Прокручиваемое модальное окно -->
   <div class="modal-dialog modal-dialog-scrollable">
 
@@ -116,20 +119,21 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">О книге</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Связаться</h1>
+        
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-
+        <a href="#" target="_blank" class="btn btn-primary">Написать в Телеграмм</a>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary">Понял</button>
       </div>
     </div>
   </div>
 </div>
     </div>
+
 
   </main>
       
