@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,redirect,request,session
-from data_control import get_all_books
+from data_control import get_all_books,get_all_courses
 app = Flask(__name__)
 
 
@@ -35,9 +35,9 @@ def books():
 
 @app.route('/course.html')
 def course():
-    #books = get_all_books()
-    #print(f"Книг: {books}")
-    return (render_template('course.html'))
+    courses = get_all_courses()
+    print(f"Курсы: {courses}")
+    return (render_template('course.html',courses=courses))
 
 @app.route('/lection.html')
 def lection():
