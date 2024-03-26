@@ -39,6 +39,24 @@ def get_all_courses():
         #print(f"{cursor.fetchall()}")
         return cursor.fetchall()
 
+def get_all_resurs():
+    connection = psycopg2.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db_name
+    )
+    # cursor = connection.cursor()
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "SELECT *"
+            "from resurs "
+        )
+        #connection.commit()
+
+        #print(f"{cursor.fetchall()}")
+        return cursor.fetchall()
+
 
 get_all_books()
 
