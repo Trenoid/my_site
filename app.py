@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,redirect,request,session
-from data_control import get_all_books,get_all_courses, get_all_resurs
+from data_control import get_all_books, get_all_courses, get_all_resurs, get_all_blog, get_blog
 app = Flask(__name__)
 
 
@@ -23,9 +23,15 @@ def about_site():
 
 @app.route('/blog.html')
 def blog():
-    #books = get_all_books()
-    #print(f"Книг: {books}")
-    return (render_template('blog.html'))
+    blogs = get_all_blog()
+    print(f"Блоги: {blogs}")
+    return (render_template('blog.html',blogs=blogs))
+
+@app.route('/read-blog.html/<int:id>',methods=['GET','POST'])
+def read_blog(id):
+    blog = get_blog(id)
+    print("hi",blog)
+    return (render_template('read-blog.html',blog=blog))
 
 @app.route('/books.html')
 def books():

@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
     <title>Talipov</title>
 </head>
-<body style= "background-image: url('../static/img/fon_img/fon_img11.jpg');      
+<body style= "background-image: url('../static/img/fon_img/fon_img12.jpg');      
 background-position: center center;      
 background-repeat: no-repeat;      
 background-attachment: fixed;      
@@ -25,7 +25,7 @@ background-color: #464646;">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="about.html"><img src = "../static/img/me.png"> </a>
+              <a class="navbar-brand" href="/about.html"><img src = "../static/img/me.png"> </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"> <img src="../static/img/menu.png" alt="Menu"></span>
               </button>
@@ -35,22 +35,22 @@ background-color: #464646;">
                     <a class="nav-link active" aria-current="page" href="/"  style = "color : #42e4f6">Главная</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="blog.html" style = "color : #42e4f6">Блог</a>
+                    <a class="nav-link" href="/blog.html" style = "color : #42e4f6">Блог</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html" style = "color : #42e4f6">Кто я</a>
+                    <a class="nav-link" href="/about.html" style = "color : #42e4f6">Кто я</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about_site.html" style = "color : #42e4f6">О сайте</a>
+                    <a class="nav-link" href="/about_site.html" style = "color : #42e4f6">О сайте</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style = "color : #42e4f6">
                       Знания
                     </a>
                     <ul class="dropdown-menu" style="background-color: black;">
-                      <li><a class="dropdown-item" href="books.html" style = "color : #42e4f6">Книги</a></li>
-                      <li><a class="dropdown-item" href="lection.html" style = "color : #42e4f6">Полезные ресурсы</a></li>
-                      <li><a class="dropdown-item" href="course.html" style = "color : #42e4f6">Курсы</a></li>
+                      <li><a class="dropdown-item" href="/books.html" style = "color : #42e4f6">Книги</a></li>
+                      <li><a class="dropdown-item" href="/lection.html" style = "color : #42e4f6">Полезные ресурсы</a></li>
+                      <li><a class="dropdown-item" href="/course.html" style = "color : #42e4f6">Курсы</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -65,29 +65,21 @@ background-color: #464646;">
 
 
     <main>
-        
-      <div class="album py-5 bg-body-tertiary">
-        <div class="container">
-          {%for blog in blogs%}
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">{{blog[1]}}</h5>
-                  <div class="d-flex justify-content-between align-items-center">
-                    
-                    <div class="btn-group">
-
-                        <a href="read-blog.html/{{blog[0]}}" target="_blank" class="btn btn-primary">Посмотреть</a>
+        <div class="container text-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="../static/img/blog_img/{{blog[0]}}.jpg" width="250" height="450"  alt="Книга" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">{{blog[1]}}</h5>
+                      <p class="card-text">{{blog[2]}}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-body-secondary">{{blog[4]}}</small>
+                      </div>
                     </div>
-                    <small class="text-body-secondary">{{blog[4]}}</small>
                   </div>
                 </div>
-              </div>
-            </div>
-            {%endfor%}
         </div>
-      </div> 
 
 
 

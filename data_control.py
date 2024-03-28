@@ -57,8 +57,42 @@ def get_all_resurs():
         #print(f"{cursor.fetchall()}")
         return cursor.fetchall()
 
+def get_all_blog():
+    connection = psycopg2.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db_name
+    )
+    # cursor = connection.cursor()
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "SELECT *"
+            "from blog "
+        )
+        #connection.commit()
 
-get_all_books()
+        #print(f"{cursor.fetchall()}")
+        return cursor.fetchall()
+
+
+def get_blog(id):
+    connection = psycopg2.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db_name
+    )
+    # cursor = connection.cursor()
+    with connection.cursor() as cursor:
+        cursor.execute(
+            (" SELECT * FROM blog WHERE id ={}".format(id))
+        )
+        #connection.commit()
+        #print(f"{cursor.fetchone()}")
+        return cursor.fetchone()
+
+get_blog(1)
 
 try:
     connection = psycopg2.connect(
