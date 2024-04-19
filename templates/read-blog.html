@@ -54,7 +54,7 @@ background-color: #464646;">
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" style = "color : #42e4f6">Связаться</a>
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#" style = "color : #42e4f6">Связаться</a>
                   </li>
                 </ul>
               </div>
@@ -83,7 +83,24 @@ background-color: #464646;">
 
 
 
-
+      <!-- Модальное окно -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Связаться</h1>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <a href="#" target="_blank" class="btn btn-primary">Написать в Телеграмм</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>  
 
 
     </main>
