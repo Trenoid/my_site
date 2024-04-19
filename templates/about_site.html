@@ -11,6 +11,29 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fontello.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
     <title>Talipov</title>
+
+    <style>
+      /* Стили для обеспечения адаптивного размера видео */
+      .video-wrapper {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 соотношение сторон */
+          height: 0;
+          overflow: hidden;
+          max-width: 100%;
+          margin-bottom: 20px;
+      }
+      .video-wrapper video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+      }
+  </style>
+
+
+
+
 </head>
 <body style= "background-image: url('../static/img/fon_img/fon_img10.jpg');      
 background-position: center center;      
@@ -63,19 +86,18 @@ background-color: #464646;">
 
   <main>
 
-    <div class="row">
-      <div class="col-12">
-        <section class="introduction text-center" style="color:  #42e4f6;">
-          <img src="../static/img/courses_img/neon_course.jpg" alt="Фото Ramis" class="profile-photo">
-          <h2>Библиотека курсов.</h2>
-          <p> Курсы, лекции которые я посмотрел и прошел начиная с 01.01.2024.<br>
-          Оценка 10 - Шедевр, изучив который откроется 3 глаз.<br>
-          Оценка 7-9 - Выше всяких похвал, оба глаза получат новые способности.<br>
-          Оценка 5-6 - Невредно, возможно улушчатся некоторые показатели глаз, но это не точно.<br>
-          Оценка 2-4 - После изучения, обязательно сходите к окулисту и провертесь.<br>
-          Оценка 1 - Новые глаза можно заказать у меня, пишите в телеграмм.<br>
-      </section>
-    </div>
+
+  <div class="video-wrapper">
+    <video controls autoplay loop muted>
+        <source src="../static/video/priroda.mp4" type="video/mp4">
+        <!-- Дополнительные источники видео, если нужно поддерживать другие форматы -->
+        Ваш браузер не поддерживает видео тег.
+    </video>
+</div>
+
+
+
+
     <!-- Модальное окно -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
